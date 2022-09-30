@@ -25,7 +25,7 @@ def download_image(id: str):
     open(path, "wb").write(r.content)
 
 def get_next_id(page: int):
-    print("Page: " + page)
+    print("Page: {page}".format(page = page))
     url = "{main}cards".format(main = api_url)
     json_r = { "page": page, "per_page": 1}
     r = requests.get(url, data=json.dumps(json_r), headers=headers)
