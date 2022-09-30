@@ -4,7 +4,7 @@ import requests
 import os
 
 # Output dir
-output_path = "../output"
+output_path = "output"
 # Main api
 api_url = "https://api.fabdb.net/"
 # Image database
