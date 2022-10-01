@@ -10,7 +10,10 @@ api_url = "https://api.fabdb.net/"
 # Image database
 image_url = "https://fabdb2.imgix.net/cards/printings/"
 
-headers =  {"Content-Type":"application/json"}
+headers =  {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer {api_key}".format(api_key = os.getenv("FABDB_API_KEY"))
+}
 
 def download_image(id: str):
     # Check if output folder exist. If not create it
